@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Security Policy — Scope Creep Detector</title>
+  <style>
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      max-width:860px;
+      margin:48px auto;
+      padding:0 22px;
+      line-height:1.65;
+      color:#172B4D
+    }
+    h1,h2{color:#091E42}
+    a{color:#0C66E4}
+    .card{
+      background:#F7F8F9;
+      border:1px solid #DFE1E6;
+      border-radius:10px;
+      padding:20px;
+      margin:20px 0
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Security Policy — Scope Creep Detector for Jira</h1>
+
+<p><strong>Effective date:</strong> October 12, 2026</p>
+
+<p>
+This Security Policy describes the security approach used by UhuruLabs for
+Scope Creep Detector for Jira (“the App”).
+</p>
+
+<h2>1. Hosting and infrastructure</h2>
+
+<p>
+Scope Creep Detector is built on Atlassian Forge. App execution and persistent
+storage use Atlassian-hosted Forge services. The App does not operate a separate
+UhuruLabs application server for processing Jira issue content.
+</p>
+
+<h2>2. Data handling</h2>
+
+<p>
+The App accesses Jira issue descriptions as required to perform scope-change
+analysis and stores saved scope baselines using Atlassian Forge storage.
+</p>
+
+<p>
+Jira issue content is not sent to an external AI service, advertising platform,
+external analytics service, or independent third-party processing backend.
+</p>
+
+<h2>3. Access permissions</h2>
+
+<p>
+The App requests only the Atlassian permissions required to provide its
+functionality. Scope Creep Detector does not require customers or end users to
+provide Atlassian Personal Access Tokens, account passwords, API secrets, or
+other shared credentials.
+</p>
+
+<h2>4. Application licensing</h2>
+
+<p>
+Paid production functionality is subject to Atlassian Marketplace licensing.
+The App checks the license state provided by Atlassian and restricts paid
+functionality when an active license is not present.
+</p>
+
+<h2>5. Logging</h2>
+
+<p>
+The App does not intentionally log Jira issue descriptions, saved baselines,
+passwords, access tokens, or other customer secrets. Operational logging is
+limited to information needed to operate and troubleshoot the App.
+</p>
+
+<h2>6. External integrations and egress</h2>
+
+<p>
+Scope Creep Detector does not expose a remote REST API and does not require
+external service integrations for its core functionality. Customer Jira content
+is not intentionally transferred outside Atlassian-hosted Forge services.
+</p>
+
+<h2>7. Vulnerability reporting</h2>
+
+<p>
+If you believe you have discovered a security vulnerability in Scope Creep
+Detector, please report it privately to UhuruLabs before publicly disclosing the
+issue.
+</p>
+
+<div class="card">
+  <p><strong>Security contact:</strong></p>
+  <p>
+    <a href="mailto:uhurulucas@gmail.com">uhurulucas@gmail.com</a>
+  </p>
+</div>
+
+<p>
+Please include a description of the issue, reproduction steps where possible,
+and any relevant technical details. Do not include passwords, API tokens, or
+other secrets in vulnerability reports.
+</p>
+
+<h2>8. Security response</h2>
+
+<p>
+UhuruLabs will review reported security issues and prioritize remediation based
+on severity and impact. Material security issues will be addressed as promptly
+as reasonably possible.
+</p>
+
+<h2>9. Changes to this policy</h2>
+
+<p>
+This Security Policy may be updated as the App or its security practices evolve.
+The current version will remain available at this URL.
+</p>
+
+<p>
+<a href="index.html">Back to UhuruLabs Legal</a>
+</p>
+
+</body>
+</html>
