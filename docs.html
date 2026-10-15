@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Documentation — Scope Creep Detector</title>
+  <style>
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      max-width:900px;
+      margin:48px auto;
+      padding:0 22px;
+      line-height:1.65;
+      color:#172B4D
+    }
+    h1,h2,h3{color:#091E42}
+    a{color:#0C66E4}
+    .card{
+      background:#F7F8F9;
+      border:1px solid #DFE1E6;
+      border-radius:10px;
+      padding:20px;
+      margin:20px 0
+    }
+    code{
+      background:#F1F2F4;
+      padding:2px 5px;
+      border-radius:4px
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Scope Creep Detector for Jira — Documentation</h1>
+
+<p><strong>Last updated:</strong> October 15, 2026</p>
+
+<p>
+Scope Creep Detector helps Jira teams identify when an issue grows beyond its
+originally approved requirements. It compares the current issue description
+against a saved baseline and highlights newly introduced requirements and their
+estimated impact.
+</p>
+
+<h2>1. What the app does</h2>
+
+<p>Scope Creep Detector can:</p>
+
+<ul>
+  <li>Save an approved Jira issue description as a baseline</li>
+  <li>Compare later edits against that baseline</li>
+  <li>Identify newly added requirements</li>
+  <li>Classify additions by impact</li>
+  <li>Show requirement-count growth</li>
+  <li>Calculate a scope-change score from 0 to 100</li>
+  <li>Distinguish harmless wording changes from meaningful scope expansion</li>
+  <li>Allow teams to update the baseline when changes are formally approved</li>
+</ul>
+
+<h2>2. Installation</h2>
+
+<p>
+Scope Creep Detector is installed through the Atlassian Marketplace by a Jira
+site administrator.
+</p>
+
+<p>
+After installation, the app appears within supported Jira issue views.
+</p>
+
+<h2>3. Setting the initial baseline</h2>
+
+<ol>
+  <li>Open a Jira issue that contains the agreed requirements in its description.</li>
+  <li>Locate the <strong>Scope Creep Detector</strong> panel.</li>
+  <li>Review the current issue description.</li>
+  <li>Select <strong>Update baseline</strong> to save the current description as the approved baseline.</li>
+</ol>
+
+<p>
+The saved baseline becomes the reference point for future scope comparisons.
+</p>
+
+<h2>4. Re-scanning an issue</h2>
+
+<p>
+When the Jira issue description changes:
+</p>
+
+<ol>
+  <li>Save the updated Jira issue.</li>
+  <li>Open the Scope Creep Detector panel.</li>
+  <li>Select <strong>Re-scan</strong>.</li>
+  <li>Review the scope score, requirement count, and any newly detected requirements.</li>
+</ol>
+
+<h2>5. Understanding the score</h2>
+
+<div class="card">
+  <h3>0 — No material scope change</h3>
+  <p>
+  The wording may have changed, but no meaningful new requirement was detected.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Low-impact scope change</h3>
+  <p>
+  A small additional requirement has been detected. Teams should review the
+  change, but it may not materially affect delivery.
+  </p>
+</div>
+
+<div class="card">
+  <h3>Possible scope expansion</h3>
+  <p>
+  One or more meaningful requirements have been added and should be reviewed
+  before work continues.
+  </p>
+</div>
+
+<div class="card">
+  <h3>High scope-creep risk</h3>
+  <p>
+  Several material requirements have been added compared with the saved
+  baseline. The issue should be reviewed before additional work is accepted.
+  </p>
+</div>
+
+<h2>6. Example</h2>
+
+<p><strong>Saved baseline:</strong></p>
+
+<p>
+Users should be able to export customer records as a CSV file.
+</p>
+
+<p><strong>Low-impact addition:</strong></p>
+
+<p>
+The export should use UTF-8 encoding.
+</p>
+
+<p>
+Scope Creep Detector identifies this as an added requirement while keeping the
+overall risk score relatively low.
+</p>
+
+<p><strong>Major expansion:</strong></p>
+
+<p>
+If PDF export, scheduled exports, email delivery, approval workflows,
+role-based restrictions, expiration rules, and audit logging are added, the app
+detects each new requirement and assigns a much higher scope-risk score.
+</p>
+
+<h2>7. Updating an approved baseline</h2>
+
+<p>
+If the new requirements are formally approved and should become the new scope:
+</p>
+
+<ol>
+  <li>Confirm the Jira description contains the approved requirements.</li>
+  <li>Select <strong>Update baseline</strong>.</li>
+  <li>The current description becomes the new reference point for future comparisons.</li>
+</ol>
+
+<h2>8. Data handling</h2>
+
+<p>
+Scope Creep Detector runs on Atlassian Forge. Saved scope baselines use
+Atlassian-hosted Forge storage.
+</p>
+
+<p>
+The app does not send Jira issue content to an external AI service, advertising
+platform, or independent UhuruLabs application backend.
+</p>
+
+<p>
+See the
+<a href="privacy.html">Privacy Policy</a>
+and
+<a href="security.html">Security Policy</a>
+for more information.
+</p>
+
+<h2>9. Limitations</h2>
+
+<p>
+Scope Creep Detector is a decision-support tool. Its scores and classifications
+should be reviewed by the project team and do not replace contractual,
+financial, project-management, or professional judgment.
+</p>
+
+<h2>10. Support</h2>
+
+<p>
+For installation questions, bugs, or product support:
+</p>
+
+<div class="card">
+  <p><strong>Email:</strong>
+    <a href="mailto:uhurulucas@gmail.com">uhurulucas@gmail.com</a>
+  </p>
+  <p>
+    <a href="support.html">Scope Creep Detector Support</a>
+  </p>
+</div>
+
+<p>
+Please include a brief description of the issue and screenshots where useful.
+Do not send passwords, API tokens, or other secrets.
+</p>
+
+<p>
+<a href="index.html">Back to UhuruLabs Legal</a>
+</p>
+
+</body>
+</html>
